@@ -1,0 +1,10 @@
+<div class="action-bar-component">
+        <button data-ng-repeat="item in $ctrl.model.items"
+                type="item.type"
+                class="btn {{::item.styleClass}}"
+                data-ng-class="{'stacked': $ctrl.model.mode=='stacked'}"
+                data-ng-click="item.action()"
+                data-ng-bind="::item.label"
+                href="#"
+                role="button"></button>
+</div>

@@ -1,0 +1,7 @@
+<ul class="letter-tiles-component">
+    <li data-ng-repeat="letter in $ctrl.lettersModel track by $index"
+        data-ng-bind="letter.letter"
+        data-ng-class="{'letter--highlighted': letter.highlighted}"
+        class="letter"
+    ></li>
+</ul>

@@ -1,0 +1,23 @@
+<div class="highscore-component page page--dark">
+
+    <action-bar class="btn-back" action-bar-config="$ctrl.backActionConfig"></action-bar>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="title text-center" data-ng-bind="::$ctrl.title"></h1>
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                <table data-ng-if="$ctrl.highscores.length > 0" class="table table-hover">
+                    <tbody>
+                    <tr data-ng-repeat="row in $ctrl.highscores">
+                        <td data-ng-repeat="cell in row" data-ng-bind="::cell"></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div data-ng-if="$ctrl.highscores.length === 0" class="text-center">
+                    <p>Highscore List is empty!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

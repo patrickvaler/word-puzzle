@@ -1,0 +1,19 @@
+/* Customize Bootstrap variables that get imported before the original Bootstrap variables.
+   Thus, derived Bootstrap variables can depend on values from here.
+   See the Bootstrap _variables.scss file for examples of derived Bootstrap variables. */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+$font-family-sans-serif:  'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Roboto, Georgia, "Times New Roman", Times, serif !default;
+
+//== Colors
+$brand-primary: #3B6284;
+
+//== Components
+$border-radius-base: 0px !default;
+$border-radius-base: 0px !default;
+$border-radius-base: 0px !default;
+
+//= Font
+$font-size-base: 18px !default;

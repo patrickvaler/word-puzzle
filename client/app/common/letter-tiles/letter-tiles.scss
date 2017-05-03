@@ -1,0 +1,54 @@
+.letter-tiles-component {
+  margin: 20px 0 40px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .letter {
+    transition: background 0.5s ease;
+    margin: 5px;
+    display: flex;
+    flex: 1 1 auto;
+    height: 100px;
+    width: 100px;
+    max-width: 100px;
+    line-height: 100px;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    background: #5C6E7D;
+  }
+
+  .letter--highlighted {
+    transition: background 0.5s ease;
+    background: #515a61;
+  }
+
+}
+
+@media (max-width: $screen-md) {
+  .letter-tiles-component {
+    .letter {
+      height: 80px;
+      width: 80px;
+      max-width: 80px;
+      line-height: 80px;
+      font-size: 28px;
+    }
+  }
+}
+
+
+@media (max-width: $screen-xs) {
+  .letter-tiles-component {
+    .letter {
+      height: 60px;
+      width: 60px;
+      max-width: 60px;
+      line-height: 60px;
+      font-size: 24px;
+    }
+  }
+}

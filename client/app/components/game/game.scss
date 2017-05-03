@@ -1,0 +1,61 @@
+.game-component {
+  .letter-tiles-component {
+    margin-bottom: 100px;
+    justify-content: center;
+  }
+
+  .answer-input {
+    margin-bottom: 60px;
+    border: none;
+    border-bottom: 1px solid #5c6e7d;
+    background-color: #f9f9f9;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .answer-input--has-error {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    border-color: #b71c1c;
+    color: #b71c1c;
+  }
+
+  .progress {
+    height: 5px;
+    background: #eaeaea;
+    box-shadow: none;
+
+    .progress-bar-game {
+      background-color: #939393;
+    }
+  }
+
+}
+
+@media (max-width: $screen-xs) {
+  .game-component {
+    .letter-tiles-component {
+      margin-bottom: 60px;
+    }
+      .answer-input {
+      font-size: 24px;
+    }
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

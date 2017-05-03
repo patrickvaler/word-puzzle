@@ -1,0 +1,14 @@
+.action-bar-component {
+  .btn {
+    border-width: 4px;
+  }
+  .btn:hover,
+  .btn:focus {
+    text-decoration: none;
+  }
+  .btn.stacked {
+    width: 100%;
+
+  }
+}
+

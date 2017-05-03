@@ -1,0 +1,24 @@
+<div class="game-component page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6 col-md-offset-3">
+
+                 <countdown data-countdown="{{$ctrl.GAME_DURATION}}"></countdown>
+                 </div>
+
+                <div class="col-md-12">
+                    <letter-tiles data-word="{{$ctrl.questionModel.question.word}}" data-config="$ctrl.lettersConfig"></letter-tiles>
+
+                    <input  id="answerInput"
+                            data-ng-model="$ctrl.questionModel.answer.text"
+                            data-ng-keyup="$ctrl.onKeyup($event, $ctrl.questionModel.answer.text)"
+                            class="answer-input"
+                            data-ng-class="{'answer-input--has-error': $ctrl.questionModel.answer.valid === false }" >
+                    <action-bar data-action-bar-config="$ctrl.actionBar"></action-bar>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

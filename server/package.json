@@ -1,0 +1,28 @@
+{
+  "name": "word-puzzle-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "babel": "babel -w src --out-dir dist --source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/patrickvaler/word-puzzle.git"
+  },
+  "author": "Patrick Valer <hello@patrickvaler.ch>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.22.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "lodash.shuffle": "^4.2.0",
+    "mongoose": "^4.7.7",
+    "mongoose-random": "^0.1.1",
+    "q": "^1.4.1"
+  }
+}

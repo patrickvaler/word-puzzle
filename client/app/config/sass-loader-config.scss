@@ -1,0 +1,3 @@
+/* This file just tells the sass-loader where bootstrap _variables and _mixins are located (se webpack.config.common.babel.js */
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins";
