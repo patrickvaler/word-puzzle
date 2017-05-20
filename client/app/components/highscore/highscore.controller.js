@@ -9,7 +9,7 @@ class HighscoreController {
         this.backActionConfig = {
             items: [{
                 action: () => {
-                    self.$window.history.back();
+                    self.$state.go('home');
                 },
                 label: 'Start new Game',
                 style: 'link'
