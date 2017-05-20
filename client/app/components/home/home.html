@@ -2,30 +2,37 @@
     <div class="container">
         <div class="row">
             <h1 class="title">Mangled Word Puzzle</h1>
-            <form name="$ctrl.formModel" class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+            <!-- Form -->
+            <form name="$ctrl.form" class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4" novalidate>
                 <div class="alert alert-danger"
-                     data-ng-show="$ctrl.formModel.nickname.$error.minlength || $ctrl.formModel.nickname.$error.maxlength">
+                     data-ng-show="!$ctrl.form.nickname.$valid && $ctrl.form.nickname.$dirty">
                     <span>
                         <strong>Invalid Nickname</strong>
                         <br>
-                        <span data-ng-show="$ctrl.formModel.nickname.$error.minlength">Minimum {{$ctrl.MIN_INPUT_LENGTH}} characters.</span>
-                        <span data-ng-show="$ctrl.formModel.nickname.$error.maxlength">Max {{$ctrl.MAX_INPUT_LENGTH}}characters.</span>
+                        <span data-ng-show="$ctrl.form.nickname.$error.minlength || $ctrl.form.nickname.$error.required">Minimum {{$ctrl.MIN_INPUT_LENGTH}} characters.</span>
+                        <span data-ng-show="$ctrl.form.nickname.$error.maxlength">Max {{MAX_INPUT_LENGTH}}characters.</span>
                     </span>
                 </div>
                 <div class="form-group">
                     <input name="nickname"
                            type="search"
                            class="form-control"
-                           placeholder="{{::$ctrl.inputModel.placeholder}}"
-                           data-ng-model="$ctrl.inputModel.nickname"
+                           placeholder="Nickname"
+                           data-ng-model="$ctrl.nickname"
                            data-ng-minlength="$ctrl.MIN_INPUT_LENGTH"
                            data-ng-maxlength="$ctrl.MAX_INPUT_LENGTH"
-                           data-ng-model-options="{ allowInvalid: true, debounce: 200, updateOn: 'blur' }"
+                           data-ng-model-options="{ allowInvalid: true, debounce: 500, updateOn: 'default' }"
                            autofocus
+                           required=""
                     />
                 </div>
                 <action-bar action-bar-config="$ctrl.actionBarConfig"></action-bar>
+
+
             </form>
+
+
+            <!-- Form End -->
         </div>
     </div>
 </div>

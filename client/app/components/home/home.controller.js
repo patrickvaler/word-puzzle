@@ -5,10 +5,8 @@ class HomeController {
     }
 
     $onInit() {
-        this.inputModel = {
-            nickname: '',
-            placeholder: 'Nickname'
-        };
+        this.nickname = '';
+
         this.actionBarConfig = {
             mode: 'stacked',
             items: [
@@ -28,13 +26,11 @@ class HomeController {
     }
 
     startNewGame() {
-        let nickname = this.formModel.nickname.$viewValue;
-        if (this.isNicknameValid(nickname)) {
-            this.$state.go('game', {
-                nickname: nickname
-            })
-        }
+        let nickname = this.form.nickname;
 
+        if (this.isNicknameValid(nickname)) {
+            this.$state.go('game', { nickname })
+        }
     }
 
     isNicknameValid(nickname) {
