@@ -5,7 +5,6 @@ class GameOverController {
     }
 
     $onInit() {
-        this.title = 'Game Over';
         this.score = this.$state.params.score;
         this.text = this.getText(this.score);
 

@@ -5,7 +5,6 @@ class HomeController {
     }
 
     $onInit() {
-        this.title = 'Mangled Word Puzzle';
         this.inputModel = {
             nickname: '',
             placeholder: 'Nickname'

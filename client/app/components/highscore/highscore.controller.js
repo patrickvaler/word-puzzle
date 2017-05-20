@@ -6,7 +6,6 @@ class HighscoreController {
 
     $onInit() {
         let self = this;
-        this.title = 'Highscore List';
         this.backActionConfig = {
             items: [{
                 action: () => {
